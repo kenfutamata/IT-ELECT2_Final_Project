@@ -1,13 +1,18 @@
-import { Router, Route, Routes } from 'react-router-dom';
-import React from 'react';
-import LandingPage from './landing_page/landing_page.jsx';
+import React from 'react'; 
+import { Route, Routes } from 'react-router-dom'; 
+
+// Import your page components
+import Login from './login.jsx'; // Adjusted path
+import Employee from './employee.jsx'; // Adjusted path
+
 
 export default function App() {
     return (
-        <>
+        <> 
             <Routes>
-                <Route path="/" element={<LandingPage />} />
+                <Route path="/" element={<Login />} />
+                <Route path="/employee" element={<Employee />} />
             </Routes>
         </>
-    )
+    );
 }
